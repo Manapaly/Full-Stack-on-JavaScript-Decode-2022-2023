@@ -1,0 +1,62 @@
+@import url(reset.css);
+html{
+    font-size: 45px;
+}
+body{
+    background-image: url("../images/background.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.Zagovolok{
+    color: #FFFFFF;
+    display: block;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Times New Roman';
+    padding: 30px 7rem 10px 7rem;
+    text-align: center;
+    box-sizing: border-box;
+}
+.Zagovolok2{
+    color: #FFFFFF;
+    display: block;
+    font-size: 28px;
+    text-transform: uppercase;
+    font-family: 'Times New Roman';
+    padding: 10px 9rem 10px 9rem;
+    text-align: center;
+    box-sizing: border-box;
+}
+.Zagovolok3{
+    color: #FFFFFF;
+    background-color: #BC6F65;
+    /* background-size: auto; */
+    display: block;
+    font-size: 28px;
+    text-transform: uppercase;
+    font-family: 'Times New Roman';
+    padding: 10px 0 10px 0;
+    margin: 0 10rem 0 10rem;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.Zagovolok4{
+    color: #000000;
+    display: block;
+    font-size: 24px;
+    font-style: italic;
+    text-align: center;
+    box-sizing: border-box;
+}
+.Zagovolok5{
+    color: #FFFFFF;
+    display: block;
+    font-size: 28px;
+    text-decoration: line-through;
+    text-transform: uppercase;
+    font-family: 'Times New Roman';
+    margin: 12px ;
+    text-align: center;
+    box-sizing: border-box;
+}

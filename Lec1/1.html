@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+    <!-- doc + enter or ! + enter == print main text 
+     br == отступ или же /n 
+     hr == создает линии между двумя тегами
+     b == делает шрифт жирнее
+     i == курсив текста
+     img == сурет, src==путь
+     target="_blank" выводит хреф в новой вклвдке
+     #link == якорная ссылка
+     ul == список пронумерованный точками 
+     ol == список пронумерованный цифрами, start == ..., type == ...
+     form == форма для отправки введенные данные куда то
+     -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My first website</title>
+    </head>
+    <body>
+        
+        <a href="#link">send</a>
+        <p>Lorem <b>lorem ipsum dolor sit amet</b>  consectetur <i>adipisicing</i>  elit. <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, accusamus voluptate?</p>
+        <h1>Hello</h1>
+        <hr>
+        <h2>Hello</h2>
+        <h3>Hello</h3>
+        <h4>Hello</h4>
+        <hr>
+        <h5>Hello</h5>
+        <h6>Hello</h6>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic accusamus tempora nam incidunt. Saepe blanditiis ipsam qui id quisquam fugiat omnis alias! Id magni asperiores, culpa soluta facilis excepturi ab, ducimus natus aliquid facere labore velit nisi nemo rem quae. Ducimus dolorem eius consectetur ipsum, natus illum ratione reiciendis eveniet dolorum ea doloribus, tempora ipsam officiis voluptatum laboriosam eum? Maiores ea dolorem error esse temporibus, ipsa aut blanditiis accusantium, nemo ut doloremque placeat mollitia illo quibusdam asperiores! Illum corrupti reiciendis fugit quis, eius officia quos magni voluptas beatae, omnis delectus? Harum in nostrum saepe incidunt officiis sed aliquid sit quibusdam.</p>
+
+        <img width="600" src="https://vscode.ru/wp-content/uploads/2017/11/hello-world.jpg" alt="hello world">
+        <br><br><br>
+        <img width="400" src="images/HelloWorld.png" alt="Hello World">
+        <br><br><br>
+
+        <a id="link" href="http://kbtu.edu.kz/" target="_blank"> KBTU </a>
+        
+        <br><br><br>
+        <a target="_blank" href="http://kbtu.edu.kz/">
+            <img width="100" src="images\KBTU.png"  alt="kbtu">
+        </a>
+
+        <ul>
+            <li>C++</li>
+            <li>Java</li>
+            <li>Python</li>
+        </ul>
+        
+        <ol start="5">
+            <li>C++</li>
+            <li>Java</li>
+            <li>Python</li>
+        </ol>
+
+        <form action="https://jsonplaceholder.typicode.com/posts"  method="POST">
+            <input type="text" placeholder="Введите имя" value="" name="full_name">
+            <input type="number" placeholder="Введите возраст"  min="0">
+            <input type="search">
+            <input type="email" required>
+            <input type="file">
+            <input type="text">
+            <input type="submit" value="я всё">
+            <button type="submit" >Отправить</button>
+        </form>
+
+    </body>
+</html>

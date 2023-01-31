@@ -1,0 +1,136 @@
+@import url(reset.css);
+
+.grid{
+    display: grid;
+    margin: grid;
+    grid-auto-rows: 324px;
+    grid-auto-columns: 324px;
+    gap: 15px;
+    
+}
+
+ .grid-item img{
+    width: 324px;
+    height: 324px;
+    object-fit: cover;
+} 
+
+
+
+.grid-item:first-child{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    padding: 80px 40px 80px 40px;
+    background-color: #e0e5eb;
+}
+.grid-item:first-child img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 180px;
+    width: 180px;
+    border-radius: 100%;
+}
+
+.Head{
+    font-family: Oswald,sans-serif !important;;
+    font-size: 2.25rem;
+    text-align: center;
+    font-weight: bold;
+    margin: 40px 0 0 0;
+}
+
+.textt{
+    /* display: block; */
+    margin: 40px;
+    font-family: Oswald,sans-serif !important;;
+    font-size: 1.35rem;
+    margin: 30px 0 0;
+    text-align: center;
+}
+
+.grid-item:nth-child(2){
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.grid-item:nth-child(3){
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.grid-item:nth-child(4){
+    font-weight: 400;
+    font-size: 2.75rem;
+    font-family: Oswald, sans-serif !important;
+    text-align: center;
+    padding: 80px 20px 80px 20px;
+    border: 2px solid black;
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.grid-item:nth-child(5){
+    background-image: url("../img/3.jpg");
+    padding: 40px;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.aaa{
+    font-weight: 400;
+    font-size: 1.875rem;
+    font-family: Roboto,sans-serif;
+    color: white;
+}
+.ddd{
+    margin: 10px 0 20px;
+    font-weight: 400;
+    font-size: 1.2rem;
+    font-family: 'Open Sans',sans-serif;
+    color: white;
+}
+.eee{
+    margin: 20px 0 40px;
+    font-weight: 400;
+    font-size: 1.2rem;
+    font-family: 'Open Sans',sans-serif;
+    color: white;
+}
+.rrr{
+    padding: 10px 30px 10px 30px;
+    background-color: red;
+    background-position: center;
+    color: white;
+    border: none;
+
+}
+
+.grid-item:nth-child(6){
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+
+.grid-item:nth-child(7){
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 3;
+}
+
+.grid-item:nth-child(7) img{
+    width: 665px; 
+}

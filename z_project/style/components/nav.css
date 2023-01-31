@@ -1,0 +1,63 @@
+.nav, .nav-right, .nav-left{
+    display: flex;
+    align-items: center;
+}
+
+.nav{
+    /* display: flex; */
+    background-color: #0a472e;
+    padding: 20px;
+    color: white;
+}
+
+.nav i{
+    color: white;
+
+}
+
+@font-face {
+    font-family: "Roboto Bold";
+    src: url("../../fonts/Roboto-Bold.ttf");
+}
+
+.nav a{
+    color: white;
+    margin-right: 50px;
+    font-size: 15px;
+    font-family: "Roboto Bold";
+    transition: .4s;
+}
+
+.nav-right a:hover{
+    color: #bac34e
+}
+
+.nav-right a:hover i{
+    color: #bac34e
+}
+
+.nav-left i{
+    margin-right: 20px;
+    transition: .4s;
+}
+
+.nav-left{
+    margin-right: 50px;
+}
+
+.nav-right{
+    border-left: 1px solid #e1e1e1;
+    padding-left: 50px;
+}
+
+@media(max-width:1000px){
+    .nav-right{
+        display: none;
+    }
+}
+
+@media(max-width:400px){
+    .nav-left p{
+        font-size: 14px;
+    }
+}

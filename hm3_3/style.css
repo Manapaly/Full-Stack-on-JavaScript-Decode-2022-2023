@@ -1,0 +1,23 @@
+body{
+    background-color:  rgba(241, 126, 112, 0.15);
+    padding: 100px 10%;
+}
+
+.parent{
+    display: flex;
+    justify-content: space-between;
+}
+
+.parent_item{
+    width: calc(25% - 30px);
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.parent_item img{
+    width: 100%;
+}
