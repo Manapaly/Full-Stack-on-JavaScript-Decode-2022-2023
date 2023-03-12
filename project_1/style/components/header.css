@@ -58,12 +58,14 @@
     position: absolute;
     top: 40px;
     right: 0;
-    width: fit-content;
+    /*width: fit-content;*/
     z-index: 10;
     min-height: 100vh;
     box-sizing: border-box;
     border: 1px solid #00a8e0;
+    width: 250px;
     display: none;
+    transition: .4s;
 }
 #menu > a{
     margin: 0 150px 50px 10px;
@@ -73,6 +75,10 @@
 }
 #menu > a:hover{
     color: black;
+}
+
+.open-menu{
+    display: block !important;
 }
 
 @media(max-width:996px){
