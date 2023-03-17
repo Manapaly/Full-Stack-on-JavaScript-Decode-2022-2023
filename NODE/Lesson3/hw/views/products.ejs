@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Products</title>
+        <script src="https://kit.fontawesome.com/ebbaf8c785.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../public/style/all.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="left-header">
+                <img src="./public/img/img.svg" alt="">
+            </div>
+            <div class="right-header">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                <input type="text" placeholder="Search">
+            </div>
+        </header>
+
+        <div class="nav">
+            <p>Home > <%=link%></p>
+        </div>
+
+        <div class="products">
+            <div class="category">
+                <h1>Cheirs</h1>
+                <a class="addProduct" href="/newProduct"><i class="fa-light fa-plus"></i> Добавить продукт</a>
+            </div>
+            <div class="elements">
+                <div class="elem">
+                    <div class="sale">25%</div>
+                    <i class="fa-regular fa-heart"></i>
+                    <img src="public/img/cheir.svg" alt="">
+                    <p>Modern Cheir</p>
+                    <p>250 $</p>
+                    <button class="fa-solid fa-ellipsis" onclick="openChangeMenu(this)"></button>
+                    <a href="/productDetail" class="plus"><i class="fa-light fa-plus"></i></a>
+                    <div class="changeMenu">
+                        <a href="/editProduct">Редактировать</a>
+                        <a href="">Удалить</a>
+                    </div>
+                </div>
+                <div class="elem">
+                    <div class="sale">25%</div>
+                    <i class="fa-regular fa-heart"></i>
+                    <img src="public/img/cheir.svg" alt="">
+                    <p>Modern Cheir</p>
+                    <p>250 $</p>
+                    <button class="fa-solid fa-ellipsis" onclick="openChangeMenu(this)"></button>
+                    <a href="/productDetail" class="plus"><i class="fa-light fa-plus"></i></a>
+                    <div class="changeMenu">
+                        <a href="/editProduct">Редактировать</a>
+                        <a href="">Удалить</a>
+                    </div>
+                </div>
+                <div class="elem">
+                    <div class="sale">25%</div>
+                    <i class="fa-regular fa-heart"></i>
+                    <img src="public/img/cheir.svg" alt="">
+                    <p>Modern Cheir</p>
+                    <p>250 $</p>
+                    <button class="fa-solid fa-ellipsis" onclick="openChangeMenu(this)"></button>
+                    <a href="/productDetail" class="plus"><i class="fa-light fa-plus"></i></a>
+                    <div class="changeMenu">
+                        <a href="/editProduct">Редактировать</a>
+                        <a href="">Удалить</a>
+                    </div>
+                </div>
+                <div class="elem">
+                    <div class="sale">25%</div>
+                    <i class="fa-regular fa-heart"></i>
+                    <img src="public/img/cheir.svg" alt="">
+                    <p>Modern Cheir</p>
+                    <p>250 $</p>
+                    <button class="fa-solid fa-ellipsis" onclick="openChangeMenu(this)"></button>
+                    <a href="/productDetail" class="plus"><i class="fa-light fa-plus"></i></a>
+                    <div class="changeMenu">
+                        <a href="/editProduct">Редактировать</a>
+                        <a href="">Удалить</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+
+            function openChangeMenu(button){
+                let m = button.parentNode.querySelector('.changeMenu');
+                if(m.style.display == 'flex'){
+                    m.style.display = 'none';
+                }else{
+                    m.style.display = 'flex';
+                }
+            }
+        </script>
+    </body>
+</html>

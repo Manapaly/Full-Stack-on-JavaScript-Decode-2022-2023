@@ -1,0 +1,25 @@
+.productDetail{
+    display: flex;
+    padding: 40px 50px;
+    position: relative;
+}
+
+.detail{
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    gap: 30px;
+}
+
+.fafa{
+    position: absolute;
+    height: 20px;
+    right: 30px;
+    top: 0;
+    font-size: 30px;
+    background: none;
+}
+.fafaca{
+    top: 32px;
+    right: 30px;
+}

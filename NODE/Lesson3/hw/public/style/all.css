@@ -1,0 +1,6 @@
+@import url("reset.css");
+@import url("header.css");
+@import url("nav.css");
+@import "products.css";
+@import "addingProduct.css";
+@import "productDetail.css";

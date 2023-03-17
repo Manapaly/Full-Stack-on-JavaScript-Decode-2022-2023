@@ -1,0 +1,138 @@
+.products{
+    background-color: white;
+    padding: 40px 59px 40px 39px ;
+    height: 1200px;
+}
+
+.category{
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.addProduct{
+    text-decoration: none;
+    width: 221px;
+    height: 41px;
+    background-color: #FE6769;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    box-sizing: border-box;
+}
+.category button i{
+    font-size: 28px;
+}
+
+.elements{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.elem{
+    width: calc(25% - 20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #EDEDED;
+    border-radius: 10px;
+    position: relative;
+    padding-bottom: 30px;
+}
+
+
+
+.sale{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 35px;
+    height: 25px;
+    background-color: #FE6769;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+.fa-heart{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    /*left: 70px;*/
+    font-size: 20px;
+}
+
+.elem img{
+    margin-top: 40px;
+    width: 70%;
+}
+
+.elem p{
+    font-size: 18px;
+    font-weight: 600;
+    margin: 7px;
+}
+
+.fa-ellipsis{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 20px;
+    border: none;
+}
+
+.plus{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: #FE6769;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -25px;
+    font-size: 36px;
+    text-decoration: none;
+    color: white;
+    border: none;
+}
+
+.changeMenu{
+    display: flex;
+    flex-direction: column;
+    width: 173px;
+    height: 74px;
+    display: none;
+    position: absolute;
+    bottom: -74px;
+    right: 0;
+}
+
+.changeMenu a:first-child{
+    background-color: white;
+    vertical-align: center;
+    text-align: center;
+    color: black;
+    font-weight: 600;
+    font-size: 17px;
+    text-decoration: none;
+    padding: 10px;
+}
+.changeMenu a:last-child{
+    background-color: red;
+    vertical-align: center;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    font-size: 17px;
+    text-decoration: none;
+    padding: 10px;
+}

@@ -1,0 +1,32 @@
+.header{
+    display: flex;
+    align-items: center;
+    height: 97px;
+    background-color: white;
+    padding: 38px 40px;
+}
+
+.left-header{
+    margin-right: 65px;
+}
+
+.right-header{
+    width: 22%;
+    background-color: #F3F5F6;
+    border-radius: 15px;
+    height: 46px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.right-header input{
+    width: 90%;
+    background: none;
+    border: none;
+}
+
+.right-header button{
+    background: none;
+    border: none;
+}

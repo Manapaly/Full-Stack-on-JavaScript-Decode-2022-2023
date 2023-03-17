@@ -1,0 +1,10 @@
+.nav{
+    padding: 22px 50px;
+    align-items: center;
+}
+.nav p{
+    font-size: 18px;
+    color: #898A8C;
+    font-family: Inter;
+    line-height: 21.78px;
+}

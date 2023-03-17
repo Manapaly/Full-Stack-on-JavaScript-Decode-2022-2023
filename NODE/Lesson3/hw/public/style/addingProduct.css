@@ -1,0 +1,33 @@
+.addingProduct{
+    display: flex;
+    flex-direction: column;
+    padding: 40px 50px;
+    gap: 25px;
+    background-color: white;
+
+}
+
+.addingProduct input{
+    font-size: 18px;
+    width: 30%;
+    padding: 12px;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+.addingProduct input::placeholder {
+    color: #898A8C;
+}
+
+.addingProduct button{
+    width: 30%;
+    padding: 12px;
+    background-color: #FE6769;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
