@@ -1,12 +1,30 @@
 const express = require('express')
 const path = require('path')
+const mongoose = require('mongoose')
 const app = express()
+const axios = require('axios')
 
 app.set("view engine", "ejs")
 
+mongoose.connect('mongodb://127.0.0.1:27017/warehouse').then(() => {
+    console.log("Connected to mongoDB")
+}).catch((e => {
+    console.log("Failed to connect")
+}))
+
 let count = 0
-app.use(express.json())
+app.use(express.urlencoded())
 app.use('/public', express.static('public'))
+
+const warehouseSchema = new mongoose.Schema({
+    title: String,
+    price: Number,
+    sale: Number,
+    urlOfImage: String,
+})
+
+const warehouse = mongoose.model("warehouse", warehouseSchema)
+
 let link = '';
 // app.use((req, res, next) => {
 //     if(!req.headers["content-type"] || !req.headers["content-type"].match(/json/)) {
@@ -27,34 +45,71 @@ let link = '';
 //     }
 // })
 
+app.post('/newProduct', async (req, res) => {
+    if(req.body.title.length != 0){
+        await new warehouse({
+            title: req.body.title,
+            price: req.body.price,
+            sale: req.body.sale,
+            urlOfImage: req.body.urlOfImage,
+        }).save()
+        res.redirect('/')
+    }else{
+        res.redirect('/newProduct?error=1')
+    }
+})
+
+app.post('/editProduct', async (req, res) => {
+    console.log(req.body)
+    await warehouse.updateOne(
+        {_id: req.body.id},
+        {
+            title: req.body.title,
+            price: req.body.price,
+            sale: req.body.sale,
+            urlOfImage: req.body.urlOfImage
+        }
+    )
+    res.redirect('/')
+})
+
+app.get('/delete/:id', async (req, res) => {
+    await warehouse.deleteOne(
+        {_id: req.params.id}
+    )
+    res.status(200).redirect('/')
+    // axios.delete(`/delete/${req.params.id}`).then(res => res.redirect('/'))
+    // res.redirect('/')/
+})
+
 app.get('/products', (req, res) => {
-    // link = req.url
-    // link = link.slice(1,)
     link = 'products'
     res.render("products", {link})
 })
 
 app.get('/newProduct', (req, res) => {
-    // link = req.url
-    // link = link.slice(1,)
     link = 'new product'
     res.render("newProduct", {link})
 })
-app.get('/editProduct', (req, res) => {
-    // link = req.url
-    // link = link.slice(1,)
+
+
+app.get('/editProduct/:id', async (req, res) => {
+    // console.log(req.params.id)
     link = 'edit product'
-    res.render("editProduct", {link})
+    const warehouseData = await warehouse.findById(req.params.id)
+    res.render("editProduct", {data: warehouseData, link})
 })
-app.get('/productDetail', (req, res) => {
-    // link = req.url
-    // link = link.slice(1,)
-    link = 'products > Modern Cheir'
-    res.render("productDetail", {link})
+
+
+app.get('/productDetail/:id', async (req, res) => {
+    const warehouseData = await warehouse.findById(req.params.id)
+    link = 'products > ' + warehouseData.title
+    res.render("productDetail", {link, data: warehouseData})
 })
-app.get('/', (req, res) => {
+app.get('/', async (req, res) => {
+    const data = await warehouse.find()
     link = 'products'
-    res.render("products", {link})
+    res.render("products", {link , data})
 })
 
 

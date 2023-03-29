@@ -23,22 +23,21 @@
 
     <div class="productDetail">
         <div class="elem">
-            <div class="sale">25%</div>
+            <div class="sale"><%=data.sale%></div>
             <i class="fa-regular fa-heart"></i>
-            <img src="public/img/cheir.svg" alt="">
-            <p>Modern Cheir</p>
-            <p>250 $</p>
+            <img src="../<%=data.urlOfImage%>" alt="">
+
         </div>
         <div class="detail">
-            <h1>Modern Cheir</h1>
-            <h2>250 $</h2>
+            <h1><%=data.title%></h1>
+            <h2><%=data.price%> $</h2>
             <a class="addProduct" href="/"><i class="fa-light fa-plus"></i> Добавить в корзину</a>
         </div>
         <div class="addToBusket">
             <button class="fa-solid fa-ellipsis fafa " onclick="openChangeMenu(this)"></button>
             <div class="changeMenu fafaca">
-                <a href="/editProduct">Редактировать</a>
-                <a href="">Удалить</a>
+                <a href="/editProduct/<%=data._id%>">Редактировать</a>
+                <a href="/delete/<%=data._id%>">Удалить</a>
             </div>
         </div>
     </div>

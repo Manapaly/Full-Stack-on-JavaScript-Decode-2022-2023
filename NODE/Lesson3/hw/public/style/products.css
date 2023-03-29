@@ -6,7 +6,6 @@
 
 .category{
     display: flex;
-
     justify-content: space-between;
 }
 
@@ -31,7 +30,8 @@
 .elements{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
+    gap: 20px;
     margin-top: 40px;
 }
 .elem{

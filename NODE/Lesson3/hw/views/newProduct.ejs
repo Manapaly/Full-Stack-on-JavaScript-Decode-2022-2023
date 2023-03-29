@@ -21,14 +21,14 @@
         <p>Home > <%=link%></p>
     </div>
 
-    <div class="addingProduct">
+    <form class="addingProduct" action = "/newProduct" method="POST">
         <h2>Добавить товар</h2>
-        <input type="text" placeholder="Название продукта">
-        <input type="number" placeholder="Цена">
-        <input type="text" placeholder="Скидка">
-        <input type="text" placeholder="URL картинки">
-        <button>Добавить продукт</button>
-    </div>
+        <input type="text" placeholder="Название продукта" name="title">
+        <input type="number" placeholder="Цена" name="price">
+        <input type="number" placeholder="Скидка" name="sale">
+        <input type="text" placeholder="URL картинки" name="urlOfImage">
+        <button type="submit">Добавить продукт</button>
+    </form>
 
 </body>
 </html>

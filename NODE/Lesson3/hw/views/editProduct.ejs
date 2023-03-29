@@ -7,28 +7,29 @@
     <link rel="stylesheet" href="../public/style/all.css">
 </head>
 <body>
-<header class="header">
-    <div class="left-header">
-        <img src="./public/img/img.svg" alt="">
-    </div>
-    <div class="right-header">
-        <button><i class="fa-solid fa-magnifying-glass"></i></button>
-        <input type="text" placeholder="Search">
-    </div>
-</header>
+    <header class="header">
+        <div class="left-header">
+            <img src="./public/img/img.svg" alt="">
+        </div>
+        <div class="right-header">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            <input type="text" placeholder="Search">
+        </div>
+    </header>
 
-<div class="nav">
-    <p>Home > <%=link%></p>
-</div>
+    <div class="nav">
+        <p>Home > <%=link%></p>
+    </div>
 
-<div class="addingProduct">
-    <h2>Редактирование товара</h2>
-    <input type="text" placeholder="Название продукта">
-    <input type="number" placeholder="Цена">
-    <input type="text" placeholder="Скидка">
-    <input type="text" placeholder="URL картинки">
-    <button>Сохранить изменения</button>
-</div>
+    <form class="addingProduct" action="/editProduct" method="POST">
+        <h2>Редактирование товара</h2>
+        <input type="hidden" name="id" value="<%=data._id%>">
+        <input type="text" placeholder="Название продукта" value="<%=data.title%>" name="title">
+        <input type="number" placeholder="Цена" value="<%=data.price%>" name="price">
+        <input type="number" placeholder="Скидка" value="<%=data.sale%>" name="sale">
+        <input type="text" placeholder="URL картинки" value="<%=data.urlOfImage%>" name="urlOfImage">
+        <button type="submit">Сохранить изменения</button>
+    </form>
 
 </body>
 </html>
